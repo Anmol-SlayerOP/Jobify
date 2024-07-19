@@ -1,0 +1,16 @@
+export {default as About } from './About/About'
+export {default as Dashboard } from './Dashboard/Dashboard'
+export {default as Contact } from './Contact/Contact'
+export {default as Home } from './Home/Home'
+export {default as ResetPasswordPage } from './ResetPassword/ResetPassword'
+export {default as ForgotPasswordPage } from './ForgotPassword/ForgotPassword'
+export {default as VerifyEmailPage } from './VerifyEmail/VerifyEmail'
+export { default as Error } from './Error/Error';
+export { default as StyleGuide } from './StyleGuide/StyleGuide';
+export {default as JobPost } from './JobPost/JobPost'
+export {default as JobDetail } from './JobDetail/JobDetail'
+export {default as Jobs } from './Jobs/Jobs'
+export {default as SignUp } from './SignUp/SignUp'
+export {default as License } from './License/License'
+export {default as Changelog } from './Changelog/Changelog'
+export {default as Password } from './Passwordchange/Password'
