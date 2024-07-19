@@ -8,26 +8,28 @@
 
 A React.js frontend application for job searching and management. Built with Tailwind CSS and Redux, this application provides features for job searching, saving, marking, and creating featured jobs, as well as generating resumes tailored according to Job Description
 
-![logo](https://i.ibb.co/FBG6gVz/Jobify-Logo.png)
+
+<img src="https://i.ibb.co/FBG6gVz/Jobify-Logo.png" alt="Description" width="100"/>
 
 ## Pages
-Homepage:
+
+## Homepage
 ![Homepage](https://drive.google.com/uc?id=1ovUXgMELeSA-EkRDBKOnfwLLqBx5qbpc)
 
 
-SearchPage:
+## SearchPage
 ![Search Page](https://drive.google.com/uc?id=1qNQdzWFCbMzx8VJPyUAnk8h3TRtI92zp)
 
-Jobs List:
+## Jobs List:
 ![Jobs List](https://drive.google.com/uc?id=1BVHDW4_yBMkLWKQtdlLLt95tTfMHNc_n)
 
-JobDetail:
+## JobDetail:
 ![Job Detail](https://drive.google.com/uc?id=1mZ-60mjOx3qLaSUGkkb7feugnID-kN1v)
 
-Dashboard:
+## Dashboard:
 ![Dashboard](https://drive.google.com/uc?id=1T2QcSvweSmIH57xnrcNaVf_5pMMZFmkx)
 
-Generated Resume:
+## Generated Resume:
 ![Resume Generated Page](https://drive.google.com/uc?id=1k67q5pI3MJ3jHWUWJgNptKEKqsr2_6h2)
 
 
