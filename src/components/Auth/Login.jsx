@@ -6,6 +6,7 @@ import close from '../../assets/EyeCloseIcon.svg'
 import { useState } from 'react';
 import {API_URL} from '../../App'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 
 const Login = ({handleDialog,setUser,setIsShowDialog}) => {
@@ -21,9 +22,12 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
   }
   const handlelogin = async (e)=>{
     e.preventDefault();
+    toast.loading('Signing in...');
     console.log("submit login")
     try{
     const response =await axios.post(`${API_URL}/auth/login`,logindata,{      headers: {        'Content-Type': 'application/json'      } })
+    toast.dismiss();
+    toast.success('Signed In Successfully');
     console.log(response);
     localStorage.setItem('jobify_token', response.data.token);
     localStorage.setItem('username',response.data.user.name);
@@ -32,8 +36,9 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
     setNotice({msg:response.data.msg,type:true});
     
     await navigate('/jobs');
-    }
-    catch(err){
+  }
+  catch(err){
+      toast.dismiss();
       let m=''
       try{
         m=err.response.data.msg
@@ -46,7 +51,7 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
       console.log(err);
       setNotice({msg:m,type:false});
 
-  }
+    }
   finally{
     setTimeout(() => setNotice({ msg: '', type: true }), 10000);
   }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { API_URL } from '../../App';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 function Details() {
+  const navigate =useNavigate();
     const [formData, setFormData] = useState({
       job_id: '',
       employer_logo: '',
@@ -116,8 +118,12 @@ function Details() {
         
         if (!response.ok) {
           throw new Error('Network response was not ok',response);
+          toast.error('Some error occurred')
         }
+        
         const data = await response.json();
+        toast.success('Job Created Successfully');
+        navigate('/dashboard?category=created');
         console.log("Form posted response recieved :-  ",data.message);
   
       } catch (error) {

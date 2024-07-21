@@ -25,11 +25,12 @@ import {
   VerifyEmailPage
     
 } from './Pages/index';
+import { toast } from 'react-toastify';
 
 
 
 
-const API_URL = 'http://localhost:5001/api' 
+const API_URL = 'https://jobify-api-c1fg.onrender.com/api' 
 
 
 function  App() {
@@ -72,8 +73,9 @@ function  App() {
         let token = localStorage.getItem('jobify_token')
         if(!token) {
           console.log("no token")
-          // localStorage.removeItem('jobify_token');     
-          // await navigate('/signup')
+          // localStorage.removeItem('jobify_token'); 
+          // toast.warn('Kindly Login')    
+          //  navigate('/signup')
           return 
         }
         // else
@@ -109,10 +111,11 @@ function  App() {
         <Route path="/auth/forgotpassword" element={<ForgotPasswordPage/>} />
         <Route path="/auth/verify-email" element={<VerifyEmailPage/>} />
         <Route path="/auth/verify-email/:token/:email" element={<VerifyEmailPage/>} />
-        <Route path="/jobs" element={isAuth==isAuth ? <Jobs /> : <Navigate to="/signup" />} />
+        <Route path="/jobs" element={ <Jobs /> }/>
+        {/* <Route path="/jobs" element={isAuth==isAuth ? <Jobs /> : <Navigate to="/signup" />}/> */}
         <Route path="/post" element={isAuth ? <JobPost /> : <Navigate to="/signup" />} />
         <Route path="/job/:id" element={isAuth==isAuth ? <JobDetail /> : <Navigate to="/signup" />} />
-        {isAuth || <Route path="/signup" element={<SignUp />} />}
+         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={isAuth ? <Dashboard /> : <Navigate to="/signup" />} /> 
         <Route path="/styles" element={<StyleGuide />} />
         <Route path="/license" element={<License />} />

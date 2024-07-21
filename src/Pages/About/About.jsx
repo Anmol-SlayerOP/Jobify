@@ -25,38 +25,6 @@ const About = () => {
         </div>
       </section>
       </div>
-      {
-      /* <section className="hero bg-cover bg-no-repeat bg-center mx-[5%] lg:w-[80%] lg:mx-[10%] mb-20">
-        <div className='w-full relative -top-10 md:-top-22' data-aos="zoom-in">
-          <img src={about} alt="" />
-        </div>
-        
-        <Slider />
-        <div className="flex flex-col items-center justify-center text-center my-20">
-          <Title heading={"OUR NUMBERS"} text1={"The Number Don&apos;t Lie About"} text2={"900+ Job"} />
-          <div className="w-full flex flex-col md:flex-row justify-between mt-10 space-y-8 md:space-y-0" data-aos="fade-up">
-            <div className="flex flex-col items-center justify-center space-y-2 md:border-r-2 border-[#7e7e7e] px-10">
-              <h2 className='text-3xl font-bold'>9.0M<span className='text-[#0071DC]'>+</span></h2>
-              <p className='text-[#7e7e7e] text-xl'>Job Available</p>
-            </div>
-            <div className="flex flex-col items-center justify-center space-y-2 md:border-r-2 border-[#7e7e7e] px-10">
-              <h2 className='text-3xl font-bold'>187k<span className='text-[#0071DC]'>+</span></h2>
-              <p className='text-[#7e7e7e] text-xl'>Jobs This Week</p>
-            </div>
-            <div className="flex flex-col items-center justify-center space-y-2 md:border-r-2 border-[#7e7e7e] px-10">
-              <h2 className='text-3xl font-bold'>123k<span className='text-[#0071DC]'>+</span></h2>
-              <p className='text-[#7e7e7e] text-xl'>Companies Here</p>
-            </div>
-            <div className="flex flex-col items-center justify-center space-y-2 md:border-r-2 border-[#7e7e7e] px-10">
-              <h2 className='text-3xl font-bold'>9M<span className='text-[#0071DC]'>+</span></h2>
-              <p className='text-[#7e7e7e] text-xl'>Candidates</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* End of Section 2 
-
-      {/* Section 3 */}
       <section className="section3 py-8 md:py-10 bg-[rgba(248,249,254,0.8)]">
         <div className="flex flex-col items-center justify-center h-full text-center bg-[rgba(248,249,254,0.8)] mx-[5%] lg:w-[80%] lg:mx-[10%] my-10">
           <Title heading={"HOW IT WORKS?"} text1={"Achieve Your Goals in"} text2={"3 Simple Steps"} />
