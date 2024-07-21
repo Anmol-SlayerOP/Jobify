@@ -31,7 +31,7 @@ import { toast } from 'react-toastify';
 
 
 const API_URL = import.meta.env.VITE_BACKEND_API;
-
+console.log("API URL: " + API_URL);
 
 function  App() {
    
