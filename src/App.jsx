@@ -30,7 +30,7 @@ import { toast } from 'react-toastify';
 
 
 
-const API_URL = 'https://jobify-api-c1fg.onrender.com/api' 
+const API_URL = import.meta.env.VITE_BACKEND_API;
 
 
 function  App() {
