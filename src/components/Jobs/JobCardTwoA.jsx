@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CiCalendar, CiDollar } from 'react-icons/ci';
 import { GoPerson } from 'react-icons/go';
 import { HiOutlineArrowSmallLeft, HiOutlineArrowSmallRight } from 'react-icons/hi2';
@@ -15,6 +15,7 @@ const JobsCardTwoA = ({disabled,Api_Job_Data,activeJob,handledeletejob}) => {
   let isResumeNotAllowed = true && disabled
   const [showCount, setShowCount] = useState(6);
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() =>{setCurrentIndex(0)},[activeJob])
   const showNextCards = () => {
     if (currentIndex + showCount < companyData.length) {
       setCurrentIndex(currentIndex + showCount);
