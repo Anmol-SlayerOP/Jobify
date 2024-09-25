@@ -16,9 +16,11 @@ export const GetInTouch = [
       sub: 'Sub Office Address',
     },
     content: {
-      email: 'anmolnag576@gmail.com',
+      // email: 'anmolnag576@gmail.com',
+      email: 'xyz@gmail.com',
       contact: '+91 123 456 789',
-      address: 'IIIT Lucknow',
+      // address: 'IIIT Lucknow',
+      address: 'India',
     },
   },
 ];
