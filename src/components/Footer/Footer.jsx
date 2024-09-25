@@ -196,7 +196,7 @@ const Footer = () => {
         Copyright © Jobify - Made With ❤️
         <Link to="/" className="hover:text-blue">
           {' '}
-          by Anmol
+          by Jobify Ltd
         </Link>
         
       </p>
