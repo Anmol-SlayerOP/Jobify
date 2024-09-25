@@ -6,7 +6,8 @@ const ContactArr = [
   {
     icon: <RiMessage2Fill size={48} />,
     name: 'Contact via Email',
-    comment: 'anmolnag576@gmail.com',
+    // comment: 'anmolnag576@gmail.com',
+    comment: 'xyz@gmail.com',
   },
   {
     icon: <FaPhoneAlt size={48} />,
@@ -16,7 +17,8 @@ const ContactArr = [
   {
     icon: <FaMapMarkedAlt size={48} />,
     name: 'Get in Touch',
-    comment: '2/12 IIIT Lucknow',
+    // comment: '2/12 IIIT Lucknow',
+    comment: 'India',
   },
 ];
 
