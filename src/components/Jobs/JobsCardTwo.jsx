@@ -17,7 +17,7 @@ const JobsCardTwo = ({disabled}) => {
   let isResumeNotAllowed = true && disabled
   let companyData=OfflineData
   const Api_Job_Data = useSelector(selectApi_Job_Data);
-  if(Api_Job_Data) {  companyData=transformApiDataArray(Api_Job_Data)}
+  if(Api_Job_Data) {  companyData=transformApiDataArray(Api_Job_Data); console.log(companyData)}
   function handlesavejob (job_id,imp){
     console.log(Api_Job_Data)
     let jobDataToSave = Api_Job_Data.find(jobdata => jobdata.job_id == job_id);

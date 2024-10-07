@@ -1,10 +1,11 @@
 import { Navbar, Footer } from '../../components';
 import { useState } from 'react';
 import { API_URL } from '../../App';
-import open from '../../assets/EyeCloseIcon.svg'
+import open from '../../assets/EyeOpenIcon.svg'
 import close from '../../assets/EyeCloseIcon.svg'
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
   const [notice, setNotice] = useState({ msg: '', type: true });
@@ -31,6 +32,7 @@ const SignUp = () => {
       setTimeout(() => setNotice({ msg: '', type: true }), 10000);
       return;
     }
+    toast.loading('Signing Up...');
     try {
       const response = await axios.post(
         `${API_URL}/auth/register`,
@@ -39,7 +41,8 @@ const SignUp = () => {
       );
       console.log(response);
       setNotice({msg:response.data.msg,type:true});
-      
+      toast.dismiss();
+      toast.success('Signed Up Successfully');
     } catch (err) {
       let m=''
       try{
@@ -49,22 +52,34 @@ const SignUp = () => {
         m = 'There is an error. Please try again later. 😥';
       }
       console.log(err);
+      toast.dismiss()
+      toast.error(m);
       setNotice({msg:m,type:false});
     }
     finally{
-      setTimeout(() => setNotice({ msg: '', type: true }), 10000);
+  
+      setTimeout(() =>{ setNotice({ msg: '', type: true });    toast.dismiss();}, 10000);
     }
   };
   
   const sendVerificationLinkAgain = async () => {
     try {
+      toast.loading('Sending Link...');
       let email =registerData.email;
+      if(!email) {
+          toast.dismiss();
+          toast.error('Kindly enter correct email')   
+          return;   
+      }
 			const response = await axios.post(`${API_URL}/auth/send-verification-email-again`, { email });
       setNotice({msg:response.data.msg,type:true})
 			// success = response.data.msg;
+      toast.dismiss()
 		} catch (err) {
       if (err.response.data.msg) {
-        setNotice({msg:response.data.msg,type:false})
+        setNotice({msg:err.response.data.msg,type:false})
+        toast.dismiss();
+        toast.error('Something went wrong!! Kindly Enter Correct Email');
         // error = err.response.data.msg;
 			} else {
         let error = 'There is an error. Please try again later. 😥';
@@ -73,7 +88,7 @@ const SignUp = () => {
 		}
     finally{
       
-      setTimeout(() => setNotice({ msg: '', type: true }), 10000);
+      setTimeout(() => {setNotice({ msg: '', type: true }); toast.dismiss()}, 10000);
     }
   }
   return (
@@ -145,7 +160,7 @@ const SignUp = () => {
           onClick={switchPasswordType}
           className="absolute right-0 top-0 h-full px-4 flex items-center justify-center border-l border-gray-200"
         >
-          {passwordType === 'password'?<img src={open}/> :<img src={close} />}
+       		{passwordType === "password"?<img src={close}/> :<img src={open} />}
             
         
         </button>

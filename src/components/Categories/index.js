@@ -52,7 +52,7 @@ export const categories = [
      },
      {
         icon: it,
-        title: 'it Management',
+        title: 'IT Management',
         vacancy: '(10+ Open Positions)',
         categorie: 'it-management',
         route: 'it-management'

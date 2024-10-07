@@ -14,6 +14,8 @@ import {
 } from '../../components';
 import JobCompaniesCard from '../../components/Jobs/JobCompaniesCard';
 import { selectApi_Job_Data, setApi_Job_Data } from '../../redux/userSlice';
+import { ClipLoader } from 'react-spinners';
+import { toast } from 'react-toastify';
 
 const Jobs = () => {
   const dispatch = useDispatch();
@@ -30,6 +32,7 @@ const Jobs = () => {
   const [remoteOnly, setRemoteOnly] = useState(false);
   const [employmentType, setEmploymentType] = useState('');
   const [employer, setEmployer] = useState('');
+  const [loading, setLoading] = useState(false);
 
   let m = {
     query: query,
@@ -39,6 +42,7 @@ const Jobs = () => {
     employer: employer,
   };
   const fetchData = async (params) => {
+    setLoading(true); 
     console.log('ye jayega', params);
     const options = {
       method: 'GET',
@@ -56,7 +60,12 @@ const Jobs = () => {
       console.log('ASLI API KA DATA.data', response.data.data);
       dispatch(setApi_Job_Data(response.data.data));
     } catch (error) {
+      const errorMessage = error?.response?.data || 'An unknown error occurred';
+      toast.error(errorMessage);
       console.error('Error fetching data:', error);
+    }
+    finally {
+      setLoading(false); // Stop loading
     }
   };
   const jobsearch = (v) => {
@@ -159,7 +168,13 @@ const Jobs = () => {
         </div>
         <div className="mx-[3%] my-10 grid w-[94%] grid-cols-1 gap-8 lg:mx-[10%] lg:w-[80%] lg:grid-cols-5">
           <div className="order-2 lg:order-1 lg:col-span-3">
-            <JobsCardTwo></JobsCardTwo>
+          {loading ? (
+      <div className="flex justify-center items-center h-screen">
+        <ClipLoader size={60} color="#0ac0ff" loading={loading}/>
+      </div>
+    ) : (
+      <JobsCardTwo></JobsCardTwo> 
+    )}
           </div>
           <div className="order-1 lg:order-2 lg:col-span-2">
             <JobsCardOne title="Advanced Search">

@@ -8,11 +8,12 @@ import { setUserData } from '../../redux/userSlice'
 import Footer from '../../components/Footer/Footer'
 import JobsCardTwoA from '../../components/Jobs/JobCardTwoA'
 import Navbar from '../../components/Navbar/Navbar'
+import { ClipLoader } from 'react-spinners';
 function Dashboard() {
   const dispatch = useDispatch();
   const [activeJob, setActiveJob] = useState('saved');
   const location = useLocation()
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get('category');
@@ -57,6 +58,7 @@ function Dashboard() {
 
     }
     async function fetchUserJobs(a) {
+      setLoading(true); 
         const options = {
             method: 'GET',
             url: `${API_URL}/jobs/${a}`,
@@ -76,6 +78,9 @@ function Dashboard() {
         // console.log(jobs)
       } catch (error) {
         console.error('Error fetching jobs:', error);
+      }
+      finally {
+        setLoading(false); // Stop loading
       }
     }
     useEffect(() => {
@@ -112,7 +117,13 @@ function Dashboard() {
    
         </div>
          <div className=' w-[94vw] md:w-[76vw] mx-[3%] md:mt-16 ml-0 md:mx-[3%] '>
+         {loading ? (
+      <div className="flex justify-center items-center h-screen">
+        <ClipLoader size={60} color="#0ac0ff" loading={loading}/>
+      </div>
+    ) : (
         <JobsCardTwoA Api_Job_Data={jobs} fetchUserjobs={fetchUserJobs} activeJob={activeJob} handledeletejob={handledeletejob}/>
+    )}
         </div>
 
 

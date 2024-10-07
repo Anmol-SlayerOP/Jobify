@@ -1,7 +1,7 @@
 import { Link ,useNavigate} from 'react-router-dom';
 import {BsFacebook, BsLinkedin, BsTwitter} from 'react-icons/bs'
 import {FcGoogle} from 'react-icons/fc'
-import open from '../../assets/EyeCloseIcon.svg'
+import open from '../../assets/EyeOpenIcon.svg'
 import close from '../../assets/EyeCloseIcon.svg'
 import { useState } from 'react';
 import {API_URL} from '../../App'
@@ -103,7 +103,7 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
 						onClick={switchPasswordType}
 						className="absolute right-0 top-0 h-full px-4 flex items-center justify-center border-l border-gray-200"
 					 >
-						{passwordType === 'password'?<img src={open}/> :<img src={close} />}
+						{passwordType === "password"?<img src={close}/> :<img src={open} />}
 							
 					
 					</button>

@@ -27,11 +27,13 @@ const VerifyEmail =()=>{
           email,
         });
         setVerificationResult(response.data.msg); // Assuming your backend returns some data
+        setTimeout(() => setVerificationResult('You can now login'),5000)
+        return
       } catch (error) {
         if (error.response.data.msg === 'Already verified.') {
          
             setVerificationResult('Already Verified'); // Handle error
-            setTimeout(() => navigate('/signup'),5000)
+            setTimeout(() => navigate('/signup'),8000)
             return
         }
         console.log( error.message);
@@ -47,7 +49,7 @@ const VerifyEmail =()=>{
    <div className="flex justify-center mt-7 text-center"> 
    {verificationResult ? (
         <div>
-          <h2 className="font-serif font-bold"> Email Verification Result</h2>
+          <h2 className="font-bold"> Email Verification Result</h2>
           <p className="text-blue">{verificationResult}</p>
           {/* Display other details from verificationResult as needed */}
         </div>
