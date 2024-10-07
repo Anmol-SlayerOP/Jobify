@@ -2,7 +2,7 @@
 
 
 -   Backend API repo is here: https://github.com/Anmol-SlayerOP/Jobify-API
--   Try the app here: 
+-   Try the app here: https://jobify-your-ultimate-job-finder.vercel.app/
 
 ## Summary for Project
 
@@ -31,6 +31,10 @@ A React.js frontend application for job searching and management. Built with Tai
 
 ## Generated Resume:
 ![Resume Generated Page](https://drive.google.com/uc?id=1k67q5pI3MJ3jHWUWJgNptKEKqsr2_6h2)
+
+## Forgot Password & Email Verification:
+![Forgot Password](https://drive.google.com/uc?id=1FvanLcPOIZmEtVLLVkpVRjnuyvGm2xvH)
+![Verification](https://drive.google.com/uc?id=1rY6H0karsfyu8obHdrTgfKV4O2J0e4go)
 
 
 
@@ -86,10 +90,10 @@ The application uses Redux for state management to save Job search data returned
 - Change API_URL in App.jsx to your Backend API URL
 
 ## Some Limitations
-As the Project uses a free-plan external API for latest Job search so the functionality of job search is limited to 7 times per 10 minutes per User and Also due to free plan restrictions of Vercel (not supporting always on servers) I cannot do Job Scraping hence have to use external api leading to limited job search functionality .
+As the Project uses a free-plan external API for latest Job search so the functionality of job search is limited to 7 times per 10 minutes per User and Also due to free plan restrictions of Render (not supporting always on servers) I cannot do Job Scraping hence have to use external api leading to limited job search functionality .
 
 
 
 
-If you'd like to talk, you can contact me here: https://www.linkedin.com/in/anmol-nag-965151197/
+If you'd like to talk, you can contact me here: https://www.linkedin.com/in/anmol-nag/
 
