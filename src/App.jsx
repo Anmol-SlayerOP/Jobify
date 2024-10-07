@@ -113,7 +113,7 @@ function  App() {
         <Route path="/jobs" element={ <Jobs /> }/>
         {/* <Route path="/jobs" element={isAuth==isAuth ? <Jobs /> : <Navigate to="/signup" />}/> */}
         <Route path="/post" element={isAuth ? <JobPost /> : <Navigate to="/signup" />} />
-        <Route path="/job/:id" element={isAuth==isAuth ? <JobDetail /> : <Navigate to="/signup" />} />
+        <Route path="/job/:id" element={isAuth ? <JobDetail /> : <Navigate to="/signup" />} />
          <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={isAuth ? <Dashboard /> : <Navigate to="/signup" />} /> 
         <Route path="/styles" element={<StyleGuide />} />
