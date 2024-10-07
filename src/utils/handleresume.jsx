@@ -37,7 +37,10 @@ function handleresume (item)  {
    }
  })
  .catch((error) => {
+
   toast.dismiss();
+  let msg= error?.response?.data?.msg || "Something Went Wrong Make sure to be Logged In"
+  toast.error(msg)
    console.log(error);
  });
  
