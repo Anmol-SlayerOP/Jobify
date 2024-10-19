@@ -37,10 +37,6 @@ const JobsCardTwoA = ({disabled,Api_Job_Data,activeJob,handledeletejob}) => {
 
   return (
     <div className='' >
-       {/* <div className="sm:flex sm:space-y-0 space-x-4 space-y-4 px-4">
-       <JobCartDropDown data={shortBy} style="py-4 px-8 bg-gray/10 rounded-full "/>
-       <JobCartDropDown data={perPage}  style="py-4 px-6 bg-gray/10 rounded-full"/>
-          </div> */}
 <p  className="text-2xl text-gray mt-2 ">Showing {companyData.length?currentIndex+1:0}-{Math.min(currentIndex+showCount,companyData.length) } of {companyData.length} Results</p>
 
       {companyData
@@ -69,7 +65,6 @@ const JobsCardTwoA = ({disabled,Api_Job_Data,activeJob,handledeletejob}) => {
                     />
                   </p>
                   <p className="flex justify-between text-blue">
-                  {`Resume Required : Yes`}             
                 </p>
                   <Link to={`/job/${item.id}?userjob=${activeJob}`}>
                     <p className="font-bold hover:text-blue">{item.position}</p>
@@ -86,21 +81,7 @@ const JobsCardTwoA = ({disabled,Api_Job_Data,activeJob,handledeletejob}) => {
                     </div>
                   </div>
                 </div>
-                {/* <div className='flex flex-row  ml-auto'>
-                    <img
-                      src={saveIcon}
-                      onClick={()=>handlesavejob(item.id)}
-                      alt="save"
-                      className="cursor-pointer   h-12 w-12 rounded-full bg-gray/10 p-4 "
-                    />
-                    <img
-                      src={saveIcon}
-                      onClick={()=>handlesavejob(item.id)}
-                      alt="save"
-                      className="cursor-pointer   h-12 w-12 rounded-full bg-gray/10 p-4 "
-                    />
-                </div> */}
-               </div>
+          </div>
 
               <div className="space-x-4 py-4 flex flex-wrap ">
                 {item.fullTime && (

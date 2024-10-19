@@ -11,6 +11,7 @@ import { saveIcon } from '../../assets/index';
 import { companyData as OfflineData } from '../../components/Jobs/JobData';
 import { Footer, JobCard, Navbar } from '../../components/index';
 import { selectApi_Job_Data, selectUserData } from '../../redux/userSlice';
+import { toast } from 'react-toastify';
 import handleresume from '../../utils/handleresume';
 import transformApiDataArray from '../../utils/transformApiDataArray';
 
@@ -75,12 +76,17 @@ const JobDetail = () => {
       },
       data : jobDataToSave
     };
-    
+    toast.loading('Saving...');
+    // toast.success('Job data')
     axios.request(config)
     .then((response) => {
+      toast.dismiss()
       console.log("SAVED JoB DATA ",JSON.stringify(response.data))
     })
     .catch((error) => {
+      toast.dismiss()
+      let msg= error?.response?.data?.message || "Something Went Wrong!!"
+      toast.error(msg)
       console.log(error);
     });
     

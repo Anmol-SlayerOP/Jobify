@@ -92,47 +92,6 @@ const Navbar = () => {
   return (
     <>
       <nav className="relative w-[100%]">
-        <article className="flex items-center justify-between bg-[#1d0217] h-2 px-4 py-4 font-semibold text-white/75">
-          <div className="hidden gap-4 lg:flex ">
-            <p className="flex gap-2">
-              <AiOutlineInstagram size={25} /> 20k followers
-            </p>
-            <p className="flex gap-2">
-              <AiFillFacebook size={24} /> 20k followers
-            </p>
-            <p className="flex gap-2">
-              <IoCall size={22} /> +91 123 456 789
-            </p>
-          </div>
-          <div className="mx-auto flex justify-center gap-4">
-            <img src={hand} alt="wave" />
-            <p className="text-center">Largest Job portal Website</p>
-          </div>
-          <div className="hidden lg:flex">
-            <div className="mr-2 flex items-center gap-2 border-r border-white/70">
-              <AiFillFacebook size={25} />
-              <AiOutlineTwitter size={25} />
-              <FaLinkedinIn size={25} />
-              <AiOutlineInstagram size={25} className="mr-2" />
-            </div>
-            <div className="flex gap-2">
-              <img src={flag} alt="flag" />
-              <select
-                value={option}
-                onChange={handleSelect}
-                className="border-0 bg-transparent text-white outline-none"
-              >
-                <option value="english" className="font-semibold text-black">
-                  English
-                </option>
-                <option value="hindi" disabled className="font-semibold text-black">
-                  Hindi
-                </option>
-              </select>
-            </div>
-          </div>
-        </article>
-
         <div className="flex justify-between px-4 py-6  shadow-xl">
           <div className="flex gap-4">
            <Link to="/"> <img src={logo} alt="logo" height={1} className="w-[100px] sm:w-[100px]" /> </Link>
@@ -166,26 +125,6 @@ const Navbar = () => {
             <Link to="/contact" className="font-semibold hover:text-blue">
               Contact{' '}
             </Link>
-             {/* <button
-                className="rounded-3xl border border-blue px-3 py-2 font-semibold text-blue transition-all duration-500 ease-in-out hover:bg-blue hover:text-white"
-                onClick={()=> {
-                  AOS.init({disable: false});
-                  AOS.refreshHard();
-                  console.log("YES animaten hit")
-                }}
-              >
-                enable
-              </button>
-             <button
-                className="rounded-3xl border border-blue px-3 py-2 font-semibold text-blue transition-all duration-500 ease-in-out hover:bg-blue hover:text-white"
-                onClick={()=> {
-                  AOS.init({disable: true});
-                  AOS.refreshHard();
-                  console.log("YES hit")
-                }}
-                >
-                disable
-              </button> */}
             {username ?
              <>
              {username}
@@ -205,11 +144,7 @@ const Navbar = () => {
               >
                 Login/Register
               </button>
-              {/* <Link to="/post">
-                <button className="rounded-3xl bg-blue px-3 py-2 font-semibold text-white transition-all duration-500 ease-in-out hover:bg-black">
-                  Job Post
-                </button>
-              </Link> */}
+             
             </div></>}
            
           </div>

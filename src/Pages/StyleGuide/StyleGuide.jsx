@@ -1,10 +1,15 @@
 import React from 'react'
 import { gears } from '../../assets/index'
+import { Navbar } from '../../components'
 
 const StyleGuide = () => {
   return (
+    <>
+    <Navbar/>
     <div className='w-[100vw] flex flex-col md:flex-row'>
-        <div className='w-[100%] md:w-[18%] bg-black/90 md:fixed md:left-0 md:top-0 pb-6 md:h-[100vh] flex items-center flex-col justify-center text-white'>
+        <div className=' w-[100vw] min-h-[40vh] md:w-[21%] bg-black/90 md:fixed md:left-0 md:h-[100vh] pb-6 flex items-center  flex-col justify-center md:justify-start  text-white'>
+    {/* <div className='w-[100vw] flex flex-col md:flex-row'>
+        <div className='w-[100%] md:w-[18%] bg-black/90 md:fixed md:left-0 md:top-0 pb-6 md:h-[100vh] flex items-center flex-col justify-center text-white'> */}
            <img src={gears} alt="gears" className='w-[100px] md:mt-[100px]'/>
            <p className='font-semibold my-8 text-xl'>01. Colors</p>
            <p className='font-semibold text-xl'>02. Typography</p>
@@ -43,6 +48,7 @@ const StyleGuide = () => {
 
       
     </div>
+    </>
   )
 }
 

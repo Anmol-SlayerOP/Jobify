@@ -46,6 +46,8 @@ const JobsCardTwo = ({disabled}) => {
     })
     .catch((error) => {
       toast.dismiss()
+      let msg= error?.response?.data?.message || "Something Went Wrong!!"
+      toast.error(msg)
       console.log(error);
     });
     
@@ -111,7 +113,6 @@ const JobsCardTwo = ({disabled}) => {
                     />
                   </p>
                   <p className="flex justify-between text-blue">
-                  {`Resume Required : Yes`}             
                 </p>
                   <Link to={`/job/${item.id}`}>
                     <p className="font-bold hover:text-blue">{item.position}</p>

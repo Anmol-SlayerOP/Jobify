@@ -33,8 +33,6 @@ const JobCard = ({disabled,limit}) => {
                   {item.name}          
                 </p>
                 <p className="flex justify-between text-blue">
-                  {/* {`Resume Required ${isResumeNotAllowed ? "not": "yes"}`}   */}
-                  {`Resume Required : Yes`}    
                 </p>
                 <Link to={`/job/${item.id}`}>
                   <p className="font-bold hover:text-blue ">{item.position}</p>
