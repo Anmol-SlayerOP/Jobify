@@ -6,7 +6,7 @@ function transformApiDataArray (apidataArray){
           image: apiData.employer_logo || 'default_logo_url', // Default image URL
           name: apiData.employer_name || 'Unknown Employer',
           position: apiData.job_title || 'Unknown Position',
-          location: `${apiData.job_city || 'Unknown City'}, ${apiData.job_state || 'Unknown State'}, ${apiData.job_country || 'Unknown Country'}`,
+          location: apiData.job_location || `${apiData.job_city || 'Unknown City'}, ${apiData.job_state || 'Unknown State'}, ${apiData.job_country || 'Unknown Country'}`,
           date: apiData.job_posted_at_timestamp ? new Date(apiData.job_posted_at_timestamp * 1000).toLocaleDateString("en-GB") : 'Unknown Date',
           deadline : apiData.job_offer_expiration_datetime_utc ?  new Date(apiData.job_offer_expiration_timestamp * 1000).toDateString() : 'September 20, 2025',
           fullTime: apiData.job_employment_type === "FULLTIME",

@@ -14,9 +14,9 @@ const Home = () => {
     <div className='w-[100%] overflow-hidden'>
       <Navbar/>
       <Hero/>
-      <Achievement/>
-      <Categories/>
-      <Jobs a/>
+      {/* <Achievement/> */}
+      {/* <Categories/> */}
+      <Jobs a style={{margin : 100}}/>
       <About/>
       {/* <Testimonial/> */}
       {/* <Benefit/> */}

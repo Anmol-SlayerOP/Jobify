@@ -56,6 +56,15 @@ function handleresume (item)  {
     <head>
       <title>Resume for ${item.position}</title>
       <style>
+      @media print {
+        @page {
+          margin: 0;
+          size: auto;
+        }
+        body {
+          margin: 0;
+        }
+      }
       #button-jobify-container {
         text-align: center; 
       }
@@ -94,8 +103,7 @@ function handleresume (item)  {
     </html>
     `);
     
-    newWindow.document.close();
-    newWindow.document.focus();
+    newWindow.document.close();   
   
   }
 

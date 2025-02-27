@@ -108,7 +108,7 @@ export let companyDetails =[
     },
     {
       id : 8,
-      item: "It Management",
+      item: "Information Technology",
     },
   ];
   export let companyData = [

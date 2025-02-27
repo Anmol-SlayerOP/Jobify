@@ -25,12 +25,13 @@ const handleSearchSubmit = (e) => {
 
 
   return (
-    <div className='bg-hero bg-no-repeat bg-cover bg-center h-[100vh] w-[100vw]'>
+    <div className=' bg-hero bg-no-repeat bg-cover bg-center h-[leøvh] w-[1ØØvw]'>
+    {/* //  <div className='"h-64 w-full bg-gradient-to-b from-[#14d0ff] to-white  h-[100vh] w-[100vw]'>  */}
       <div className='w-[100%] overflow-x-hidden  h-[100vh]'>
         <header className='flex flex-col w-[94%] mx-[3%] md:w-[80%] md:mx-[10%] pt-[50px] lg:pt-[130px] 2xl:w-[60%] 2xl:mx-[20%] 2xl:items-center 2xl:justify-center 2xl:mt-[5%]'>
          <div className='flex gap-3' data-aos="fade-right" data-aos-duration="1500">
           <hr className='border border-blue w-[70px] mt-4'/>
-          <h1 className='text-blue font-semibold 2xl:text-4xl'>NO LONGER LOOKING FOR JOB</h1>
+          <h1 className='text-blue font-semibold 2xl:text-4xl'>LOOKING FOR JOB ?</h1>
          </div>
          <h1 className='my-8 text-4xl md:text-6xl 2xl:text-7xl font-semibold leading-16'  data-aos="fade-right" data-aos-duration="1000">
            Signup & Let Your <br />Job find You

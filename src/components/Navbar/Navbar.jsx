@@ -101,7 +101,7 @@ const Navbar = () => {
             >
               <img src={dots} alt="dots" className="hidden sm:block" />
               <div>
-                <p className=" font-semibold text-gray sm:text-lg">Category</p>
+                <p className=" font-semibold text-gray sm:text-lg">Job Category</p>
                 <Catdropdown isOpen={isOpen} />
               </div>
             </div>
@@ -199,7 +199,7 @@ const Navbar = () => {
            
             </div></>}
            
-            <div className="mt-8 flex flex-col gap-4 text-lg font-semibold text-black/75">
+            {/* <div className="mt-8 flex flex-col gap-4 text-lg font-semibold text-black/75">
               <p className="flex gap-2">
                 <AiOutlineInstagram size={25} /> 20k followers
               </p>
@@ -209,8 +209,8 @@ const Navbar = () => {
               <p className="flex gap-2">
                 <IoCall size={22} /> +00 123 456 789
               </p>
-            </div>
-            <div className="flex gap-2">
+            </div> */}
+            {/* <div className="flex gap-2">
               <img src={flag} alt="flag" />
               <select
                 value={option}
@@ -224,7 +224,7 @@ const Navbar = () => {
                   Hindi
                 </option>
               </select>
-            </div>
+            </div> */}
           </div>
         )}
       </nav>

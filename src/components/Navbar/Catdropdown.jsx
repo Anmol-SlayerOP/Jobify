@@ -16,7 +16,7 @@ const Catdropdown = ({isOpen}) => {
           <Link to='/jobs/?query=marketing'><p className='font-semibold hover:text-blue my-2'>Marketing</p></Link>
           <Link to='/jobs/?query=photography'><p className='font-semibold hover:text-blue my-2'>Teaching & Study</p></Link>
           <Link to='/jobs/?query=teaching-study'><p className='font-semibold hover:text-blue my-2'>Photography</p></Link>
-          <Link to='/jobs/?query=it-management'><p className='font-semibold hover:text-blue my-2'>It Management</p></Link>
+          <Link to='/jobs/?query=software-engineer'><p className='font-semibold hover:text-blue my-2'>Information Technology</p></Link>
         </div>
       )}
     </div>
