@@ -113,11 +113,9 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
             <Link className="text-blue" to='/auth/forgotpassword'> Forgot Password?</Link>
             <br />
             <a role="button" onClick={()=> {
-          setlogindata({email:'anmolnag576@gmail.com', password:'qwerty@123'})
-         setTimeout(() => {
-          handlelogin();
-         }, 1000); 
-          }} className="text-orange-500" to='/auth/forgotpassword'> Demo Login</a>
+               const demoData = { email: 'anmolnag576@gmail.com', password: 'qwerty@123' };
+               setlogindata(demoData);
+          }} className="text-orange-500" to='/auth/forgotpassword'> Use Demo Credentials</a>
            
 
             <div className="flex justify-center">
