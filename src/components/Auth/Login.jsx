@@ -21,6 +21,7 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
    setlogindata({...logindata,[e.target.name]: e.target.value})
   }
   const handlelogin = async (e)=>{
+    if(e!=null)
     e.preventDefault();
     toast.loading('Signing in...');
     console.log("submit login")
@@ -110,6 +111,11 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
           </div>
             </div>
             <Link className="text-blue" to='/auth/forgotpassword'> Forgot Password?</Link>
+            <br />
+            <a role="button" onClick={()=> {
+          setlogindata({email:'anmolnag576@gmail.com', password:'qwerty@123'})
+          handlelogin();
+          }} className="text-orange-500" to='/auth/forgotpassword'> Demo Login</a>
            
 
             <div className="flex justify-center">
