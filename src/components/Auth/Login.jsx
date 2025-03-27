@@ -114,7 +114,9 @@ const Login = ({handleDialog,setUser,setIsShowDialog}) => {
             <br />
             <a role="button" onClick={()=> {
           setlogindata({email:'anmolnag576@gmail.com', password:'qwerty@123'})
+         setTimeout(() => {
           handlelogin();
+         }, 1000); 
           }} className="text-orange-500" to='/auth/forgotpassword'> Demo Login</a>
            
 
